@@ -1,0 +1,2 @@
+# tsfluff
+Fun tslint rules

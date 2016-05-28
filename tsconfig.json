@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "outDir": "dist/",
         "sourceMap": true,
-        "rootDir": "src/"
+        "rootDir": "src/",
+        "moduleResolution": "node"
     },
     "files": [
         "src/noEsInIdentifiersRule.ts"

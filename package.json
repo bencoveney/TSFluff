@@ -1,0 +1,25 @@
+{
+  "name": "tsfluff",
+  "version": "1.0.0",
+  "description": "Fun tslint rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencoveney/tsfluff.git"
+  },
+  "keywords": [
+    "tslint",
+    "tsfluff",
+    "typescript",
+    "lint"
+  ],
+  "author": "Ben Coveney",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bencoveney/tsfluff/issues"
+  },
+  "homepage": "https://github.com/bencoveney/tsfluff#readme"
+}

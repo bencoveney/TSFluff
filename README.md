@@ -9,7 +9,7 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
   This letter is relied upon by lazy developers who refuse to be more inventive in their programming. It is time this practice was stamped out out for good.
 
-## Planned Rules
+## Rule ideas to implement
 
 - **Extend noEsInIdentifiers**
 
@@ -18,6 +18,10 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 - **Minimum Line Length**
 
   Prevent lazy developers from trying to boost their Lines-Of-Code metrics with unnecessary line breaks.
+
+- **Minimum Function Length**
+
+  Functions are an important part of TypeScript/JavaScript and should be treated as such by ensuring that coders cannot create throwaway functions frivilously.
 
 - **Only '_', '$' and '-' In Private Identifiers**
 
@@ -53,6 +57,26 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 - **Whitespace must alternate between tabs and spaces**
 
   *#TRIGGERED*
+
+- **Reduced control flow options**
+
+  Really all a programmer needs is a do-while loop and the trusty ternary operator.
+
+- **String literals must be built one character at a time**
+
+  This makes refactoring super "e" + "a" + "s" + "y" + "!".
+
+- **No local variables**
+
+  Putting all the data on the window allows for graceful data transmission between different parts of your application.
+
+- **No triple-equals**
+
+  The time wasted pressing the button a third time could have cured at least a fraction of a disease by now.
+
+- **Multiple unused semicolons**
+
+  Provided at the end of functions for maintainers to use when adding code.
 
 ## Sample Configuration
 

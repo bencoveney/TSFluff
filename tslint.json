@@ -1,7 +1,7 @@
 {
     "rulesDirectory": ["dist/"],
     "rules": {
-        "noEsInIdentifiers": true,
-        "noTripleEquals": true
+        "no-es-in-identifiers": true,
+        "no-triple-equals": true
     }
 }

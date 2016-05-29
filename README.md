@@ -3,9 +3,15 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
 ## Current Rules
 
-- **No "E"s in identifiers:** `no-es-in-identifiers`
+- **No vowels in identifiers:** `no-vowels-in-identifiers`
 
-  This letter is relied upon by lazy developers who refuse to be more inventive in their programming. It is time this practice was stamped out for good.
+  These letters are relied upon by lazy developers who refuse to be more inventive with their programming terminology. It is time this practice was stamped out for good.
+  
+  This rule comes with 3 different modes which can be toggled between depending on your programming ability:
+
+  - **easy:** Disallows e
+  - **medium (default):** Disallows a, e, i, o, u
+  - **hard:** Disallows a, e, i, o, u, y
 
 - **No strict equality checks:** `no-triple-equals`
 
@@ -16,10 +22,6 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
   String literals are often expressed all at once with no thought given to refactoring. This rule enforces better coding practices by requiring string literals to be split into 1 character long chunks which makes restucturing the string at a later time super `"e" + "a" + "s" + "y" + "!"`.
 
 ## Rule ideas to implement
-
-- **Extend noEsInIdentifiers**
-
-  Allow configuration of which vowels should be blocked (including Y for hard-mode). This still leaves plenty of possible variable names for the competent developer (mySkyGypsy, spyMythRhythm)
 
 - **Minimum Line Length**
 
@@ -82,8 +84,17 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 {
     "rulesDirectory": ["path/to/my/dope/rules"],
     "rules": {
-        "no-es-in-identifiers": true,
-        "no-triple-equals": true
+        "no-vowels-in-identifiers":  [
+            true, 
+            {
+                "difficulty": "medium"
+            }
+        ],
+        "no-triple-equals": true,
+        "short-string-literals": true
     }
 }
 ```
+
+## Sample Code
+To demonstrate exemplary code a simple FizzBuzz script has been made available [here](test/sample.ts).

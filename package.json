@@ -4,7 +4,8 @@
   "description": "Fun tslint rules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "tsc",
+    "test": "tslint test/sample.ts"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "typescript",
     "lint"
   ],
-  "author": "Ben Coveney",
+  "author": "Ben Coveney <bencoveney@gmail.com> (http://www.bencoveney.com)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bencoveney/tsfluff/issues"

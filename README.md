@@ -82,8 +82,8 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 {
     "rulesDirectory": ["path/to/my/dope/rules"],
     "rules": {
-        "noEsInIdentifiers": true,
-        "noTripleEquals": true
+        "no-es-in-identifiers": true,
+        "no-triple-equals": true
     }
 }
 ```

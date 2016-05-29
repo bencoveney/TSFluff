@@ -35,7 +35,6 @@ var NoTripleEqualsWalker = (function (_super) {
                 this.addFailure(this.createFailure(position, NoTripleEqualsWalker.COMPARISON_OPERATOR_WIDTH, Rule.NOT_EQUAL_FAILURE_STRING));
                 break;
         }
-        var bool = "hello" == "1";
         _super.prototype.visitBinaryExpression.call(this, node);
     };
     NoTripleEqualsWalker.COMPARISON_OPERATOR_WIDTH = 3;

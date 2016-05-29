@@ -2,6 +2,7 @@
     "rulesDirectory": ["dist/"],
     "rules": {
         "no-es-in-identifiers": true,
-        "no-triple-equals": true
+        "no-triple-equals": true,
+        "short-string-literals": true
     }
 }

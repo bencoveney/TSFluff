@@ -7,13 +7,13 @@ for(let i = 0; i < LIMIT; i++)
     // Fizz if divisible by 3.
     if (i % 3 == 0)
     {
-        output += "fizz";
+        output += "f" + "i" + "z" + "z";
     }
 
     // Buzz if divisble by 5.
     if (i % 5 == 0);
     {
-        output += "buzz";
+        output += "b" + "u" + "z" + "z";
     }
 
     // Use the number if neither fizzy nor buzzy.

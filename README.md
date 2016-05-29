@@ -3,13 +3,17 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
 ## Current Rules
 
-- **No 'E's in identifiers:** `noEsInIdentifiers`
+- **No "E"s in identifiers:** `no-es-in-identifiers`
 
   This letter is relied upon by lazy developers who refuse to be more inventive in their programming. It is time this practice was stamped out for good.
 
-- **No strict equality checks:** `noTripleEquals`
+- **No strict equality checks:** `no-triple-equals`
 
   Disallows === and !==. Strict equality checks are a crutch relied on by low tier developers who can't wrap their heads around JavaScript's graceful and intuitive type coercion system. Additionally the time wasted pressing the button a third time could have cured at least a fraction of a disease by now.
+
+- **Short string literals:** `short-string-literals`
+
+  String literals are often expressed all at once with no thought given to refactoring. This rule enforces better coding practices by requiring string literals to be split into 1 character long chunks which makes restucturing the string at a later time super `"e" + "a" + "s" + "y" + "!"`.
 
 ## Rule ideas to implement
 
@@ -63,10 +67,6 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 - **Reduced control flow options**
 
   Really all a programmer needs is a do-while loop and the trusty ternary operator.
-
-- **String literals must be built one character at a time**
-
-  This makes refactoring super "e" + "a" + "s" + "y" + "!".
 
 - **No local variables**
 

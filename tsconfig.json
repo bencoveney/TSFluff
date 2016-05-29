@@ -11,6 +11,7 @@
     },
     "files": [
         "src/noEsInIdentifiersRule.ts",
-        "src/noTripleEqualsRule.ts"
+        "src/noTripleEqualsRule.ts",
+        "src/shortStringLiteralsRule.ts"
     ]
 }

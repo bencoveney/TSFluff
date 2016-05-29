@@ -10,7 +10,7 @@
         "moduleResolution": "node"
     },
     "files": [
-        "src/noEsInIdentifiersRule.ts",
+        "src/noVowelsInIdentifiersRule.ts",
         "src/noTripleEqualsRule.ts",
         "src/shortStringLiteralsRule.ts"
     ]

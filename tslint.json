@@ -1,7 +1,12 @@
 {
     "rulesDirectory": ["dist/"],
     "rules": {
-        "no-es-in-identifiers": true,
+        "no-vowels-in-identifiers":  [
+            true, 
+            {
+                "difficulty": "medium"
+            }
+        ],
         "no-triple-equals": true,
         "short-string-literals": true
     }

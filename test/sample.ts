@@ -1,24 +1,25 @@
-const LIMIT = 500;
+// The limit of numbers to fizzbuzz.
+const SPY_MYTH = 100;
 
-for(let i = 0; i < LIMIT; i++)
+for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
 {
-    let output = '';
+    let mySkyGypsy = '';
 
     // Fizz if divisible by 3.
-    if (i % 3 == 0)
+    if (rhythm % 3 == 0)
     {
-        output += "f" + "i" + "z" + "z";
+        mySkyGypsy += "f" + "i" + "z" + "z";
     }
 
     // Buzz if divisble by 5.
-    if (i % 5 == 0);
+    if (rhythm % 5 == 0);
     {
-        output += "b" + "u" + "z" + "z";
+        mySkyGypsy += "b" + "u" + "z" + "z";
     }
 
     // Use the number if neither fizzy nor buzzy.
-    output = output != '' ? output : i.toString());
+    mySkyGypsy = mySkyGypsy != '' ? mySkyGypsy : rhythm["t" + "o" + "S" + "t" + "r" + "i" + "n" + "g"]();
 
-    // tslint:disable-next-line:no-es-in-identifiers
-    console.log(output);
+    // tslint:disable-next-line:no-vowels-in-identifiers
+    console.log(mySkyGypsy);
 }

@@ -3,11 +3,13 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
 ## Current Rules
 
-- **No 'E's in identifiers.**
+- **No 'E's in identifiers:** `noEsInIdentifiers`
 
-  `noEsInIdentifiers`
+  This letter is relied upon by lazy developers who refuse to be more inventive in their programming. It is time this practice was stamped out for good.
 
-  This letter is relied upon by lazy developers who refuse to be more inventive in their programming. It is time this practice was stamped out out for good.
+- **No strict equality checks:** `noTripleEquals`
+
+  Disallows === and !==. Strict equality checks are a crutch relied on by low tier developers who can't wrap their heads around JavaScript's graceful and intuitive type coercion system. Additionally the time wasted pressing the button a third time could have cured at least a fraction of a disease by now.
 
 ## Rule ideas to implement
 
@@ -70,10 +72,6 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
   Putting all the data on the window allows for graceful data transmission between different parts of your application.
 
-- **No triple-equals**
-
-  The time wasted pressing the button a third time could have cured at least a fraction of a disease by now.
-
 - **Multiple unused semicolons**
 
   Provided at the end of functions for maintainers to use when adding code.
@@ -84,7 +82,8 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 {
     "rulesDirectory": ["path/to/my/dope/rules"],
     "rules": {
-        "noEsInIdentifiers": true
+        "noEsInIdentifiers": true,
+        "noTripleEquals": true
     }
 }
 ```

@@ -10,6 +10,7 @@
         "moduleResolution": "node"
     },
     "files": [
-        "src/noEsInIdentifiersRule.ts"
+        "src/noEsInIdentifiersRule.ts",
+        "src/noTripleEqualsRule.ts"
     ]
 }

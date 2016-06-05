@@ -1,5 +1,5 @@
 # TSFluff
-TSFluff is a collection of linting rules for the masochistic developer. Enable them at your own peril!
+TSFluff is a collection of [TSLint](https://palantir.github.io/tslint/) rules for the masochistic developer. Enable them at your own peril!
 
 ## Current Rules
 
@@ -27,59 +27,6 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
   This rule accepts an option for the number of empty statements required (with a default of 5).
 
-## Rule ideas to implement
-
-- **Minimum Line Length**
-
-  Prevent lazy developers from trying to boost their Lines-Of-Code metrics with unnecessary line breaks.
-
-- **Minimum Function Length**
-
-  Functions are an important part of TypeScript/JavaScript and should be treated as such by ensuring that coders cannot create throwaway functions frivilously.
-
-- **Only '_', '$' and '-' In Private Identifiers**
-
-  You might not know what the variable is but at least this way there is no question that its private.
-
-- **Equal Bracket Counts**
-
-  Ensure all brackets are used without prejudice: [], {}, ().
-
-- **All Caps Comments**
-
-  In case your reader decides to ignore your important thoughts.
-
-- **Doubtful Comments**
-
-  All comments must include one of the following prefixes/suffixes:
-
-    - I think...
-    - I guess...
-    - I suspect...
-    - It seems like..
-    - ...as far I know
-    - ...probably
-    - ...hopefully
-    - ...kind of
-
-  After all, nobody is right all the time.
-
-- **JavaScript Mode**
-
-  All data must be typed as `any`.
-
-- **Whitespace must alternate between tabs and spaces**
-
-  *#TRIGGERED*
-
-- **Reduced control flow options**
-
-  Really all a programmer needs is a do-while loop and the trusty ternary operator.
-
-- **No local variables**
-
-  Putting all the data on the window allows for graceful data transmission between different parts of your application.
-
 ## Sample Configuration
 
 ```typescript
@@ -103,4 +50,52 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 ```
 
 ## Sample Code
-To demonstrate exemplary code a simple FizzBuzz script has been made available [here](test/sample.ts).
+
+A sample fizzbuzz implementation which passes all rules.
+
+```typescript
+// The limit of numbers to fizzbuzz.
+const SPY_MYTH = 100;
+
+for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
+{
+    let mySkyGypsy = '';
+
+    ;
+
+    // Fizz if divisible by 3.
+    if (rhythm % 3 == 0)
+    {
+        mySkyGypsy += "f" + "i" + "z" + "z";
+    }
+
+    ;
+
+    // Buzz if divisble by 5.
+    if (rhythm % 5 == 0)
+    {
+        mySkyGypsy += "b" + "u" + "z" + "z";
+    }
+
+    ;
+
+    // Use the number if neither fizzy nor buzzy.
+    mySkyGypsy = mySkyGypsy != '' ? mySkyGypsy : rhythm["t" + "o" + "S" + "t" + "r" + "i" + "n" + "g"]();
+
+    ;
+
+    // tslint:disable-next-line:no-vowels-in-identifiers
+    console.log(mySkyGypsy);
+
+    ;;
+    ;
+}
+```
+
+## Contributions
+
+You can help make the world a better place by adding rules and improvements to the TSFluff ruleset.
+
+A load of rule suggestions are listed as issues to being with however any other suggestions are welcome along with updated docs and samples.
+
+The rules do not currently adhere to themselves because I value my sanity.

@@ -35,7 +35,7 @@ var NoVowelsInIdentifiersWalker = (function (_super) {
         }
         var firstOption = allOptions[0];
         if (firstOption == null || typeof firstOption !== "object" || firstOption[NoVowelsInIdentifiersWalker.OPTION_DIFFICULTY] == null) {
-            return new RegExp("o");
+            return defaultTest;
         }
         var difficulty = firstOption[NoVowelsInIdentifiersWalker.OPTION_DIFFICULTY];
         return NoVowelsInIdentifiersWalker.IDENTIFIER_TESTS[difficulty] || defaultTest;

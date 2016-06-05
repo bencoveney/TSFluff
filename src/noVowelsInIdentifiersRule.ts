@@ -30,7 +30,7 @@ class NoVowelsInIdentifiersWalker extends Lint.RuleWalker {
         let allOptions = this.getOptions();
         let defaultTest = NoVowelsInIdentifiersWalker.DEFAULT_TEST;
 
-        // If there were options specified and the options weren't empty.
+        // Quit early if there weren't options specified or the options were empty.
         if (allOptions == null || allOptions.length === 0) {
             return defaultTest;
         }
@@ -40,8 +40,7 @@ class NoVowelsInIdentifiersWalker extends Lint.RuleWalker {
 
         if(firstOption == null || typeof firstOption !== "object" || firstOption[NoVowelsInIdentifiersWalker.OPTION_DIFFICULTY] == null)
         {
-            return new RegExp("o");//defaultTest;
-            //return defaultTest;
+            return defaultTest;
         }
 
         let difficulty = firstOption[NoVowelsInIdentifiersWalker.OPTION_DIFFICULTY];

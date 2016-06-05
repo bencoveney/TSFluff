@@ -12,6 +12,7 @@
         "require-empty-statements": [
             true,
             7
-        ]
+        ],
+        "uppercase-comments": true
     }
 }

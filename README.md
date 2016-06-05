@@ -44,7 +44,8 @@ TSFluff is a collection of [TSLint](https://palantir.github.io/tslint/) rules fo
         "require-empty-statements": [
             true,
             7
-        ]
+        ],
+        "uppercase-comments": true
     }
 }
 ```
@@ -54,7 +55,7 @@ TSFluff is a collection of [TSLint](https://palantir.github.io/tslint/) rules fo
 A sample fizzbuzz implementation which passes all rules.
 
 ```typescript
-// The limit of numbers to fizzbuzz.
+// THE LIMIT OF NUMBERS TO FIZZBUZZ.
 const SPY_MYTH = 100;
 
 for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
@@ -63,7 +64,7 @@ for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
 
     ;
 
-    // Fizz if divisible by 3.
+    // FIZZ IF DIVISIBLE BY 3.
     if (rhythm % 3 == 0)
     {
         mySkyGypsy += "f" + "i" + "z" + "z";
@@ -71,7 +72,7 @@ for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
 
     ;
 
-    // Buzz if divisble by 5.
+    // BUZZ IF DIVISBLE BY 5.
     if (rhythm % 5 == 0)
     {
         mySkyGypsy += "b" + "u" + "z" + "z";
@@ -79,7 +80,7 @@ for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
 
     ;
 
-    // Use the number if neither fizzy nor buzzy.
+    // USE THE NUMBER IF NEITHER FIZZY NOR BUZZY.
     mySkyGypsy = mySkyGypsy != '' ? mySkyGypsy : rhythm["t" + "o" + "S" + "t" + "r" + "i" + "n" + "g"]();
 
     ;

@@ -27,7 +27,7 @@ TSFluff is a collection of [TSLint](https://palantir.github.io/tslint/) rules fo
 
   This rule accepts an option for the number of empty statements required (with a default of 5).
 
-  **Uppercase comments** `uppercase-comments`
+- **Uppercase comments** `uppercase-comments`
 
   A comment that isn't read is effectively useless. With this great new rule you can ensure that all of your precious code annotations are given the attention they deserve using a technique as old as computers themselves: SHOUTING.
 

@@ -21,6 +21,12 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
   String literals are often expressed all at once with no thought given to refactoring. This rule enforces better coding practices by requiring string literals to be split into 1 character long chunks which makes restucturing the string at a later time super `"e" + "a" + "s" + "y" + "!"`.
 
+- **Require empty statements** `require-empty-statements`
+
+  Everyone knows that editing old existing code is a difficult and time consuming process. This rule helps mitigate that pain by ensuring that there are always some spare semicolons to use scattered throughout the file making it 100% more maintainable.
+
+  This rule accepts an option for the number of empty statements required (with a default of 5).
+
 ## Rule ideas to implement
 
 - **Minimum Line Length**
@@ -74,15 +80,11 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
 
   Putting all the data on the window allows for graceful data transmission between different parts of your application.
 
-- **Multiple unused semicolons**
-
-  Provided at the end of functions for maintainers to use when adding code.
-
 ## Sample Configuration
 
 ```typescript
 {
-    "rulesDirectory": ["path/to/my/dope/rules"],
+    "rulesDirectory": ["dist/"],
     "rules": {
         "no-vowels-in-identifiers":  [
             true, 
@@ -91,7 +93,11 @@ TSFluff is a collection of linting rules for the masochistic developer. Enable t
             }
         ],
         "no-triple-equals": true,
-        "short-string-literals": true
+        "short-string-literals": true,
+        "require-empty-statements": [
+            true,
+            7
+        ]
     }
 }
 ```

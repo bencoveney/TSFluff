@@ -13,6 +13,7 @@
         "src/noVowelsInIdentifiersRule.ts",
         "src/noTripleEqualsRule.ts",
         "src/shortStringLiteralsRule.ts",
-        "src/requireEmptyStatementsRule.ts"
+        "src/requireEmptyStatementsRule.ts",
+        "src/uppercaseCommentsRule.ts"
     ]
 }

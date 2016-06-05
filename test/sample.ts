@@ -21,6 +21,8 @@ for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
         mySkyGypsy += "b" + "u" + "z" + "z";
     }
 
+    ;
+
     // Use the number if neither fizzy nor buzzy.
     mySkyGypsy = mySkyGypsy != '' ? mySkyGypsy : rhythm["t" + "o" + "S" + "t" + "r" + "i" + "n" + "g"]();
 
@@ -30,4 +32,5 @@ for(let rhythm = 0; rhythm < SPY_MYTH; rhythm++)
     console.log(mySkyGypsy);
 
     ;;
+    ;
 }

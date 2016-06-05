@@ -9,23 +9,20 @@ export class Rule extends Lint.Rules.AbstractRule {
 }
 
 class RequireEmptyStatementsWalker extends Lint.RuleWalker {
-    private static REQUIRED_SEMICOLONS = 5;
-    private static FAILURE_STRING = (foundCount: number) => {
-        return RequireEmptyStatementsWalker.REQUIRED_SEMICOLONS.toString() +
-            " empty statements are required but only " +
-            foundCount.toString() +
-            " were found. Please add more semicolons.";
-    };
+    private static DEFAULT_REQUIRED_SEMICOLONS = 5;
 
     private emptyStatementsCount: number;
+    private requiredSemicolons: number;
 
     protected visitSourceFile(node: ts.SourceFile) {
+        this.requiredSemicolons = this.getRequiredSemicolons();
+
         this.emptyStatementsCount = 0;
 
         super.visitSourceFile(node);
 
-        if(this.emptyStatementsCount < RequireEmptyStatementsWalker.REQUIRED_SEMICOLONS) {
-            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), RequireEmptyStatementsWalker.FAILURE_STRING(this.emptyStatementsCount)));
+        if(this.emptyStatementsCount < this.requiredSemicolons) {
+            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), this.getFailureString()));
         }
     }
 
@@ -35,5 +32,32 @@ class RequireEmptyStatementsWalker extends Lint.RuleWalker {
         }
 
         super.visitNode(node);
+    }
+
+    private getRequiredSemicolons(): number {
+        let allOptions = this.getOptions();
+        let defaultRequiredSemicolons = RequireEmptyStatementsWalker.DEFAULT_REQUIRED_SEMICOLONS;
+
+        // Quit early if there weren't options specified or the options were empty.
+        if (allOptions == null || allOptions.length === 0) {
+            return defaultRequiredSemicolons;
+        }
+
+        // The first option should be the number of semicolons.
+        const firstOption = allOptions[0];
+
+        if(firstOption == null || typeof firstOption !== "number" || firstOption <= 0)
+        {
+            return defaultRequiredSemicolons;
+        }
+
+        return firstOption;
+    }
+
+    private getFailureString(): string {
+        return this.requiredSemicolons.toString() +
+            " empty statements are required but only " +
+            this.emptyStatementsCount.toString() +
+            " were found. Please add more semicolons.";
     }
 }

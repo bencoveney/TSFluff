@@ -9,6 +9,9 @@
         ],
         "no-triple-equals": true,
         "short-string-literals": true,
-        "require-empty-statements": true
+        "require-empty-statements": [
+            true,
+            7
+        ]
     }
 }

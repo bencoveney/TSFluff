@@ -23,10 +23,11 @@ var RequireEmptyStatementsWalker = (function (_super) {
         _super.apply(this, arguments);
     }
     RequireEmptyStatementsWalker.prototype.visitSourceFile = function (node) {
+        this.requiredSemicolons = this.getRequiredSemicolons();
         this.emptyStatementsCount = 0;
         _super.prototype.visitSourceFile.call(this, node);
-        if (this.emptyStatementsCount < RequireEmptyStatementsWalker.REQUIRED_SEMICOLONS) {
-            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), RequireEmptyStatementsWalker.FAILURE_STRING(this.emptyStatementsCount)));
+        if (this.emptyStatementsCount < this.requiredSemicolons) {
+            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), this.getFailureString()));
         }
     };
     RequireEmptyStatementsWalker.prototype.visitNode = function (node) {
@@ -35,13 +36,25 @@ var RequireEmptyStatementsWalker = (function (_super) {
         }
         _super.prototype.visitNode.call(this, node);
     };
-    RequireEmptyStatementsWalker.REQUIRED_SEMICOLONS = 5;
-    RequireEmptyStatementsWalker.FAILURE_STRING = function (foundCount) {
-        return RequireEmptyStatementsWalker.REQUIRED_SEMICOLONS.toString() +
+    RequireEmptyStatementsWalker.prototype.getRequiredSemicolons = function () {
+        var allOptions = this.getOptions();
+        var defaultRequiredSemicolons = RequireEmptyStatementsWalker.DEFAULT_REQUIRED_SEMICOLONS;
+        if (allOptions == null || allOptions.length === 0) {
+            return defaultRequiredSemicolons;
+        }
+        var firstOption = allOptions[0];
+        if (firstOption == null || typeof firstOption !== "number" || firstOption <= 0) {
+            return defaultRequiredSemicolons;
+        }
+        return firstOption;
+    };
+    RequireEmptyStatementsWalker.prototype.getFailureString = function () {
+        return this.requiredSemicolons.toString() +
             " empty statements are required but only " +
-            foundCount.toString() +
+            this.emptyStatementsCount.toString() +
             " were found. Please add more semicolons.";
     };
+    RequireEmptyStatementsWalker.DEFAULT_REQUIRED_SEMICOLONS = 5;
     return RequireEmptyStatementsWalker;
 }(Lint.RuleWalker));
 //# sourceMappingURL=requireEmptyStatementsRule.js.map
